@@ -50,12 +50,11 @@ for page_index in range(first_page, last_page+1):
 		f           = open("mogu.txt","a", encoding="utf-8")
 		f.write(entry_text)
 		f.close()
-'''	
-提取日文内容并保存		
+'''		
 		entry_text_jp  = soup.select('#body_show_mo')
 		entry_text_jp  = str(entry_text_jp[0]).replace("<div id=\"body_show_mo\">", "") \
                                   .replace("</div>","").replace("<br/>","\n") 
-		f           = open("mogu.txt","a", encoding="utf-8")
+		f              = open("mogu.txt","a", encoding="utf-8")
 		f.write(entry_text_jp)
 		f.close()
 '''
